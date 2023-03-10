@@ -1,0 +1,72 @@
+Inainte de a rezolva task-urile am inceput prin a crea lista de care am nevoie.
+Apoi am creat functiile de citire, afisare si free pentru lista, urmand sa fac
+si scheletul de if else pentru argumentele din linia de comanda.
+
+Task-ul 2.1
+
+Am inceput prin a crea functiile pentru media si deviatia valorilor din fereastra
+urmarind formulele din PDF. Avand aceste functii, am parcurs in main cu un for 
+toate ferestrele, iar daca nodul din centru nu apartinea intervalului dat de medie
+si deviatie am apelat o functie ce elimina aceste noduri si elibera memoria ocupata
+de acestea.
+
+Task-ul 2.2.1
+
+Pentru inceput am creat functia ce imi calculeaza valoarea mediana, folosindu-ma de
+trei max-uri pentru a nu fi nevoit sa sortez lista, vectorii nefiind perimisi. Dupa
+calcularea acesteia, valoarea este introdusa in noua lisa printr-o copie a functiei
+de inserare deoarece nu am folosit parametri la ele pentru a putea fi folosite
+pentru orice lista. In main am parcurs lista si am apelat functia de filtrare mediana
+pentru fiecare dintre ferestrele de 5 elemente. In final, am interschimbat listele 
+si am eliberat memoria pentru cea veche, pentru putea folosi lista noua la celelalte
+task-uri.
+
+Task-ul 2.2.2   
+
+Fiind in esenta acelasi task cu cel anterior, implementarea acestuia a fost destul
+de rapida si fara probleme.
+
+Mai intai am creat functia ce imi calculeaza media aritmetica dintre elemente si
+apeleaza functia creata la task-ul anterior ce imi introduce valoarea calculata in 
+noua lista. In main am parcurs lista cu un for asemanator task-ului 2.2.1 apeland
+functia de calcul al mediei aritmetice si, in final, interschimband listele.
+
+Task-ul 2.3
+
+Am scris tot task-ul in main, deoarece nu am considerat ca este nevoie de vreo 
+functie, avand in vedere ca tot ce am facut a fost sa parcurg lista cu un for, 
+iar daca diferenta dintre timestamp-uri era intre 100 si 1000 de milisecunde,
+am inlocuit valoarea si timestamp-ul cu media aritmetica dintre cele 2 noduri.
+
+Task-ul 2.4
+
+Am inceput task-ul prin a crea functiile C si w dupa formulele din text, folosind 
+calculatorul si foarte multe printf-uri pentru a-mi da seama de ce nu imi dau bine.
+Dupa implementarea acestora am creat functia care imi calculeaza f-ul, petrecand 
+si mai mult timp pentru a-mi da seama ce nu calculeaza bine, afland in cele din urma 
+ca ordinea la suma lui right[i]*w(i,k) ordinea este pe dos. Dupa aceea, am creat o 
+structura noua "LR" pentru a implementa left si right date in enunt ca vectori pe 
+care nu avem voie sa ii folosim. In main, am parcurs lista cu un while si am creat 
+listele left si right. Apoi am parcurs lista din nou pentru a gasi intervalele mai 
+mari de 1000 de milisecunde. In urma gasirii acestora am creat o variabila "timestamp" 
+si am creat noi noduri pana cand aceasta a devenit mai mare decat capatul din dreapta 
+al intervalului. Dupa implementarea task-ului 2.5, am observat ca testul 9 imi da
+fail si dupa inca ceva timp, am realizat ca listele left si right se modifica dupa 
+fiecare  interval in care am completat cu date. Astfel, cu ajutorul unui while, am 
+recreat left si right dupa fiecare completare cu date, apoi le-am parcurs pana la 
+elementul la care ramasese while-ul anterior.
+
+Task-ul 2.5
+
+Am inceput prin a-mi crea o variabila care imi extrage lungimea din argumentul din
+linia de comanda, dupa care am creat functia ce imi afiseaza intervalele. Mai intai
+am creat un minim si un maxim pe care le-am gasit in urma parcurgerii listei, apoi
+am luat o variabila "interval" din care am scazut lungimea pana a devenit mai mica
+decat minimul. Dupa aceea, cu ajutorul unui while, cat timp intervalul este mai mic
+decat valoarea maxima, am parcurs lista si intr-un contor am retinut numarul de noduri
+care apartin acelui interval, urmand sa afisez fiecare interval si numarul de elemente
+din acesta.
+
+
+La final, cu ajutorul unui if am printat lista sau intervalele, dupa caz, dupa care am 
+eliberat memoria listei date, dar si a listelor left si right.
